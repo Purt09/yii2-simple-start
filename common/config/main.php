@@ -12,6 +12,18 @@ return [
         'authManager' => [
             'class' => 'yii\rbac\DbManager',
         ],
+        'authClientCollection' => [
+            'class' => 'yii\authclient\Collection',
+            'clients' => [
+                'facebook' => [
+                    'class' => 'yii\authclient\clients\Facebook',
+                    'authUrl' => 'https://www.facebook.com/dialog/oauth?display=popup',
+                    'clientId' => 'YOUR APP CLIENT ID',
+                    'clientSecret' => 'YOUR APP CLIENT SECRET',
+                    'attributeNames' => ['name', 'email', 'first_name', 'last_name'],
+                ],
+            ],
+        ],
     ],
     'bootstrap' => ['media'],
     'modules' => [

@@ -18,6 +18,11 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="login-box-body">
 
     <div class="row">
+        <?= yii\authclient\widgets\AuthChoice::widget([
+            'baseAuthUrl' => ['auth/auth/network'],
+            'popupMode' => false,
+        ]) ?>
+
         <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
 
         <?= $form->field($model, 'username')->textInput(['autofocus' => true]) ?>
