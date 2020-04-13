@@ -1,0 +1,52 @@
+<?php
+
+use yii\helpers\Html;
+use yii\grid\GridView;
+
+/* @var $this yii\web\View */
+/* @var $searchModel common\entities\User\UserSearch */
+/* @var $dataProvider yii\data\ActiveDataProvider */
+
+$this->title = 'Users';
+$this->params['breadcrumbs'][] = $this->title;
+?>
+<div class="user-index">
+
+    <h1><?= Html::encode($this->title) ?></h1>
+
+    <p>
+        <?= Html::a('Добавить пользователя', ['create'], ['class' => 'btn btn-success']) ?>
+    </p>
+
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+
+    <?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
+            'id',
+            'username',
+            [
+                'attribute' => 'Роль',
+                'value' => function ($user){
+                    if(!empty($userRole = \common\helpers\RbacHelpers::getRoleUser($user, 'description'))){
+                        return $userRole;
+                    }
+                }
+            ],
+            'password_hash',
+            'password_reset_token',
+            //'email:email',
+            //'email_confirm_token:email',
+            //'status',
+            //'created_at',
+            //'updated_at',
+            //'verification_token',
+
+            ['class' => 'yii\grid\ActionColumn'],
+        ],
+    ]); ?>
+
+
+</div>
