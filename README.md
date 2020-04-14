@@ -12,12 +12,9 @@ php init
 ###Поднимаем БД
 ```
 php yii migrate up
-php yii migrate --migrationPath=@yii/rbac/migrations/
 php yii rbac/init
 ```
 ##Настройка сервера
-Настраиваем домены (Присерно так: https://prnt.sc/rxwreb)\
-Рекомендую сделать всего один домен в корень проекта(Как на скрине)\
 Версия php 7.2+\
 Версия MySQL 5.7+\
 ###Подключаем пакеты
@@ -32,6 +29,6 @@ Cafet \
 fas123
 ---
 Officer \
-fas123
+fas123 
 ###Настройка сайта
 Необходима поменять домен в файле common/config/params.php на свои (Иначе не будут работаь cookie and session)
