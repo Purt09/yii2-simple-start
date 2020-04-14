@@ -19,9 +19,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <div class="row">
         <?= yii\authclient\widgets\AuthChoice::widget([
-            'baseAuthUrl' => ['auth/auth/network'],
-            'popupMode' => false,
-        ]) ?>
+            'baseAuthUrl' => ['auth/network/auth']
+        ]); ?>
 
         <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
 

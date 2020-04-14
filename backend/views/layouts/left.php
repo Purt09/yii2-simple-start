@@ -25,6 +25,7 @@
                         'url' => '#',
                         'items' => [
                             ['label' => 'Пользователи', 'icon' => 'user', 'url' => ['/user'],],
+                            ['label' => 'Управление правами', 'icon' => '', 'url' => ['/user-admin/assignment/'],],
                             ['label' => 'Роли', 'icon' => '', 'url' => ['/user-admin/role/'],],
                             ['label' => 'Права дотсупа', 'icon' => '', 'url' => ['/user-admin/permission/'],],
                         ],
