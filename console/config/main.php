@@ -30,6 +30,7 @@ return [
                 '@pantera/media/migrations',
                 '@bupy7/pages/migrations',
                 '@pantera/faq/migrations'
+                '@console/migrations',
             ],
         ],
     ],
