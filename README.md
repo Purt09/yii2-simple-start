@@ -3,7 +3,7 @@
 
 ## Install
 ```
-git clone https://github.com/Purt09/CRM_army.git
+git clone https://github.com/Purt09/yii2-simple-start.git
 php init
 composer install
 php yii migrate up
@@ -11,7 +11,6 @@ php yii rbac/init
 ```
 ##Setting server
 php 7.2+\
-MySQL 5.7+
 ###User data:
 Admin \
 fas123

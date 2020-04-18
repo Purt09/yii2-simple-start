@@ -29,8 +29,8 @@ return [
                 '@yii/rbac/migrations/',
                 '@pantera/media/migrations',
                 '@bupy7/pages/migrations',
-                '@pantera/faq/migrations'
-                '@console/migrations',
+                '@pantera/faq/migrations',
+                '@console/migrations'
             ],
         ],
     ],
