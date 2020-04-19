@@ -23,21 +23,11 @@ class m200411_202234_insert_user extends Migration
             'status' => 10,
         ]);
         $this->insert('{{%user}}', [
-            'username' => 'Officer',
+            'username' => 'User',
             'auth_key' => 'tUu1qHcd10diwUol3xeI-18MuHkkprQI',
             'password_hash' => '$2y$13$YtJZcwaIeelHuXzMP.sHUON1ll9fl3Ot2HwqWO3AiDmLsqngbGhG6',
             'password_reset_token' => 'RkD_Jw0_8H1edzLk7MM-ZKEFfYR7VbMr_1392559490',
             'email' => 'officer@5fak.vka',
-            'created_at' => 1,
-            'updated_at' => 1,
-            'status' => 10,
-        ]);
-        $this->insert('{{%user}}', [
-            'username' => 'Cadet',
-            'auth_key' => 'tUu1qHcd101iwUol3xeI-18MuHkkprQI',
-            'password_hash' => '$2y$13$YtJZcwaIeelHuXzMP.sHUON1ll9fl3Ot2HwqWO3AiDmLsqngbGhG6',
-            'password_reset_token' => 'RkD_1w0_8H1edzLk7MM-ZKEFfYR7VbMr_1392559490',
-            'email' => 'cadet@5fak.vka',
             'created_at' => 1,
             'updated_at' => 1,
             'status' => 10,

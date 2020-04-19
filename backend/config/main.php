@@ -69,6 +69,10 @@ return [
         'except' => ['/login', 'site/error'],
         'rules' => [
             [
+                'allow' => false,
+                'roles' => ['?', 'user'],
+            ],
+            [
                 'allow' => true,
                 'roles' => ['admin'],
             ],

@@ -1,5 +1,7 @@
 <?php
 return [
     'cookieValidationKey' => '',
-    'cookieDomain' => '.shop.dev',
+    'cookieDomain' => 'start',
+    'frontendHostInfo' => 'http://start/',
+    'backendHostInfo' => 'http://admin.start/',
 ];

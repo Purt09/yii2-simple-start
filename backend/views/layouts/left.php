@@ -1,5 +1,4 @@
 <aside class="main-sidebar">
-
     <section class="sidebar">
 
         <!-- search form -->
