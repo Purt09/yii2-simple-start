@@ -27,7 +27,8 @@
         "mdmsoft/yii2-admin": "~2.0",
         "pantera-digital/yii2-faq": "@dev",
         "filsh/yii2-oauth2-server": "^2.0",
-        "kartik-v/yii2-widgets": "^3.4"
+        "kartik-v/yii2-widgets": "^3.4",
+        "kartik-v/yii2-field-range": "^1.3"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

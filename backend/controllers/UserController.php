@@ -2,12 +2,11 @@
 
 namespace backend\controllers;
 
-use backend\forms\user\UserAddForm;
 use backend\services\user\UserServices;
 use core\helpers\user\RbacHelpers;
 use Yii;
 use core\entities\User\User;
-use core\entities\User\UserSearch;
+use backend\forms\user\UserSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -75,7 +74,7 @@ class UserController extends Controller
      */
     public function actionCreate()
     {
-        $form = new UserAddForm();
+        $form = new User();
         $roles = RbacHelpers::getRoles();
 
         if ($form->load(Yii::$app->request->post()) && $form->validate()) {
@@ -99,21 +98,14 @@ class UserController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-        $form = new UserAddForm(
-            $model->username,
-            $model->email,
-            $model->status,
-            RbacHelpers::getRoleUser($model)
-        );
         $roles = RbacHelpers::getRoles();
 
-        if ($form->load(Yii::$app->request->post()) && $form->validate()) {
-            $this->service->update($model, $form);
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('update', [
-            'models' => $form,
+            'models' => $model,
             'roles' => $roles
         ]);
     }

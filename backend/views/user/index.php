@@ -2,9 +2,10 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use kartik\date\DatePicker;
 
 /* @var $this yii\web\View */
-/* @var $searchModel common\entities\User\UserSearch */
+/* @var $searchModel backend\forms\user\UserSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Users';
@@ -36,8 +37,29 @@ $this->params['breadcrumbs'][] = $this->title;
                 }
             ],
             'email:email',
-            'status',
-            'created_at',
+            [
+                'attribute' => 'status',
+                'filter' => \core\helpers\user\UserHelper::statusList(),
+                'value' => function (\core\entities\User\User $user) {
+                    return \core\helpers\user\UserHelper::statusLabel($user->status);
+                },
+                'format' => 'raw'
+            ],
+            [
+                'attribute' => 'created_at',
+                'filter' => DatePicker::widget([
+                    'model' => $searchModel,
+                    'attribute' => 'date_from',
+                    'attribute2' => 'date_to',
+                    'type' => DatePicker::TYPE_RANGE,
+                    'separator' => '-',
+                    'pluginOptions' => [
+                        'autoclose' => true,
+                        'format' => 'yyyy-mm-dd'
+                    ]
+                ]),
+                'format' => ['date', 'php:Y-m-d H:i:s']
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

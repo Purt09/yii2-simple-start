@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $models \backend\forms\user\UserAddForm */
+/* @var $models \core\entities\User\User*/
 /* @var $roles array все роли, которые существуют */
 
 ?>
@@ -17,14 +17,10 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($models, 'email')->textInput() ?>
 
-    <?= $form->field($models, 'password')->textInput() ?>
-
     <?= $form->field($models, 'status')->dropDownList([
             '0' => 'Активен',
             '10' => 'Не активен',
     ]) ?>
-
-    <?= $form->field($models, 'role')->dropDownList($roles) ?>
 
 
 

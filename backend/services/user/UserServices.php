@@ -19,11 +19,11 @@ class UserServices
     }
 
     /**
-     * @param UserAddForm $form
+     * @param User $form
      * @return User
      * @throws \Exception
      */
-    public function signup(UserAddForm $form): User{
+    public function signup(User $form): User{
         $user = User::requestSignup(
             $form->username,
             $form->email,
@@ -31,11 +31,10 @@ class UserServices
         );
         $user->status = $form->status;
         $this->repository->save($user);
-        RbacHelpers::setRoleUser($form->role, $user);
         return $user;
     }
 
-    public function update(User $user, UserAddForm $form): void{
+    public function update(User $user, User $form): void{
         $user->username = $form->username;
         $user->email = $form->email;
         $user->status = $form->status;
@@ -44,8 +43,6 @@ class UserServices
         $user->resetPassword($form->password);
 
         $this->repository->save($user);
-
-        RbacHelpers::setRoleUser($form->role, $user);
     }
 
 }
