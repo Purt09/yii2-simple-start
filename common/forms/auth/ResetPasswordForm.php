@@ -3,7 +3,7 @@ namespace common\forms\auth;
 
 use yii\base\InvalidArgumentException;
 use yii\base\Model;
-use common\entities\User\User;
+use core\entities\User\User;
 
 /**
  * Password reset form

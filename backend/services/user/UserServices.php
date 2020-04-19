@@ -5,9 +5,9 @@ namespace backend\services\user;
 
 
 use backend\forms\user\UserAddForm;
-use common\entities\User\User;
-use common\helpers\RbacHelpers;
-use common\repositories\UserRepository;
+use core\entities\User\User;
+use core\helpers\user\RbacHelpers;
+use core\repositories\user\UserRepository;
 
 class UserServices
 {

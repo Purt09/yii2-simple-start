@@ -2,7 +2,7 @@
 
 namespace frontend\controllers\auth;
 
-use common\services\auth\PasswordResetService;
+use core\services\auth\PasswordResetService;
 use Yii;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;

@@ -4,10 +4,10 @@ namespace backend\controllers;
 
 use backend\forms\user\UserAddForm;
 use backend\services\user\UserServices;
-use common\helpers\RbacHelpers;
+use core\helpers\user\RbacHelpers;
 use Yii;
-use common\entities\User\User;
-use common\entities\User\UserSearch;
+use core\entities\User\User;
+use core\entities\User\UserSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

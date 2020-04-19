@@ -1,8 +1,8 @@
 <?php
 
-namespace common\repositories;
+namespace core\repositories\user;
 
-use common\entities\User\User;
+use core\entities\User\User;
 
 class UserRepository
 {

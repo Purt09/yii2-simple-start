@@ -3,7 +3,7 @@
 namespace common\tests\unit\entities\User;
 
 use Codeception\Test\Unit;
-use common\entities\User\User;
+use core\entities\User\User;
 
 class ConfirmSignupTest extends Unit
 {

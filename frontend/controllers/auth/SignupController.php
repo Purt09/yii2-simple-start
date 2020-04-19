@@ -2,7 +2,7 @@
 
 namespace frontend\controllers\auth;
 
-use common\services\auth\SignupService;
+use core\services\auth\SignupService;
 use Yii;
 use yii\web\Controller;
 use yii\filters\AccessControl;

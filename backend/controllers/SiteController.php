@@ -2,7 +2,7 @@
 
 namespace backend\controllers;
 
-use common\services\auth\AuthService;
+use core\services\auth\AuthService;
 use Yii;
 use yii\web\Controller;
 use yii\filters\VerbFilter;

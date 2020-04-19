@@ -4,7 +4,7 @@
 namespace frontend\modules\api\modules;
 
 
-class User extends \common\entities\User\User
+class User extends \core\entities\User\User
 {
     public function fields()
     {

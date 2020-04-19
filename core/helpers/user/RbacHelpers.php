@@ -1,8 +1,8 @@
 <?php
 
-namespace common\helpers;
+namespace core\helpers\user;
 
-use common\entities\User\User;
+use core\entities\User\User;
 use yii\helpers\ArrayHelper;
 
 class RbacHelpers
@@ -10,6 +10,10 @@ class RbacHelpers
     static public $ADMIN = 'admin';
     static public $USER = 'user';
 
+    /** Прописывать настройки первоначальные для ролей
+     *  т.е. их создание и базовое присвоение кому-нибудь
+     * @throws \Exception
+     */
     public static function init()
     {
         $admin = \Yii::$app->authManager->createRole(self::$ADMIN);

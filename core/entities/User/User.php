@@ -1,6 +1,6 @@
 <?php
 
-namespace common\entities\User;
+namespace core\entities\User;
 
 use Yii;
 use yii\base\NotSupportedException;
@@ -9,7 +9,7 @@ use yii\db\ActiveRecord;
 use yii\web\IdentityInterface;
 use lhs\Yii2SaveRelationsBehavior\SaveRelationsBehavior;
 use yii\db\ActiveQuery;
-use common\entities\User\Network;
+use core\entities\User\Network;
 
 /**
  * User model

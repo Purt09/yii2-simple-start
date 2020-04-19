@@ -1,13 +1,13 @@
 <?php
 
-namespace common\entities\User;
+namespace core\entities\User;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\entities\User\User;
+use core\entities\User\User;
 
 /**
- * UserSearch represents the model behind the search form of `common\entities\User\User`.
+ * UserSearch represents the model behind the search form of `core\entities\User\User`.
  */
 class UserSearch extends User
 {

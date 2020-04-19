@@ -1,8 +1,8 @@
 <?php
 
-namespace common\readModels;
+namespace core\readModels;
 
-use common\entities\User\User;
+use core\entities\User\User;
 
 class UserReadRepository
 {

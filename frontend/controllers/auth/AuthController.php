@@ -2,10 +2,9 @@
 
 namespace frontend\controllers\auth;
 
-use common\entities\Order\Order;
-use common\helpers\RbacHelpers;
-use common\services\auth\AuthService;
-use common\services\order\OrderService;
+
+use core\helpers\user\RbacHelpers;
+use core\services\auth\AuthService;
 use Yii;
 use yii\helpers\Url;
 use yii\web\Controller;
@@ -34,8 +33,6 @@ class AuthController extends Controller
             try {
                 $user = $this->service->auth($form);
                 Yii::$app->user->login($user, $form->rememberMe ? Yii::$app->params['user.rememberMeDuration'] : 0);
-                if(RbacHelpers::getRoleUser($user) == RbacHelpers::$ADMIN)
-                    return $this->redirect('/admin');
                 return $this->redirect(Url::to('/'));
             } catch (\DomainException $e) {
                 Yii::$app->errorHandler->logException($e);

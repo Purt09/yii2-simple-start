@@ -2,7 +2,7 @@
 
 namespace common\forms\auth;
 
-use common\models\User;
+use core\models\User;
 use yii\base\InvalidArgumentException;
 use yii\base\Model;
 

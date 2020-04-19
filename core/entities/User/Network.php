@@ -1,6 +1,6 @@
 <?php
 
-namespace common\entities\User;
+namespace core\entities\User;
 
 use Webmozart\Assert\Assert;
 use yii\db\ActiveRecord;

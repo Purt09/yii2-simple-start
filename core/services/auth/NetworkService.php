@@ -1,9 +1,9 @@
 <?php
 
-namespace common\services\auth;
+namespace core\services\auth;
 
-use common\entities\User\User;
-use common\repositories\UserRepository;
+use core\entities\User\User;
+use core\repositories\user\UserRepository;
 
 class NetworkService
 {

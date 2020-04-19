@@ -3,7 +3,7 @@
 namespace common\forms\auth;
 
 use Yii;
-use common\entities\User\User;
+use core\entities\User\User;
 use yii\base\Model;
 
 class ResendVerificationEmailForm extends Model

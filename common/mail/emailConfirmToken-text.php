@@ -1,6 +1,6 @@
 <?php
 /* @var $this yii\web\View */
-/* @var $user \common\entities\User\User */
+/* @var $user \core\entities\User\User */
 $confirmLink = Yii::$app->urlManager->createAbsoluteUrl(['auth/signup/confirm', 'token' => $user->email_confirm_token]);
 ?>
     Hello <?= $user->username ?>,

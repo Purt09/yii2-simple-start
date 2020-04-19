@@ -30,19 +30,14 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'Роль',
                 'value' => function ($user){
-                    if(!empty($userRole = \common\helpers\RbacHelpers::getRoleUser($user, 'description'))){
+                    if(!empty($userRole = \core\helpers\user\RbacHelpers::getRoleUser($user, 'description'))){
                         return $userRole;
                     }
                 }
             ],
-            'password_hash',
-            'password_reset_token',
-            //'email:email',
-            //'email_confirm_token:email',
-            //'status',
-            //'created_at',
-            //'updated_at',
-            //'verification_token',
+            'email:email',
+            'status',
+            'created_at',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

@@ -1,10 +1,10 @@
 <?php
 
-namespace common\services\auth;
+namespace core\services\auth;
 
-use common\entities\User\User;
+use core\entities\User\User;
 use common\forms\auth\SignupForm;
-use common\repositories\UserRepository;
+use core\repositories\user\UserRepository;
 use yii\mail\MailerInterface;
 
 class SignupService

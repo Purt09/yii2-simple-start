@@ -4,7 +4,7 @@
 namespace backend\forms\user;
 
 
-use common\entities\User\User;
+use core\entities\User\User;
 use yii\base\Model;
 
 class UserAddForm extends Model
