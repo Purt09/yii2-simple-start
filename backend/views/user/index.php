@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 use kartik\date\DatePicker;
+use yii\grid\ActionColumn;
 
 /* @var $this yii\web\View */
 /* @var $searchModel backend\forms\user\UserSearch */
@@ -60,8 +61,23 @@ $this->params['breadcrumbs'][] = $this->title;
                 ]),
                 'format' => ['date', 'php:Y-m-d H:i:s']
             ],
+            [
+                'class' => ActionColumn::className(),
+                'template' => '{view}{info}',
+                'buttons'=>[
 
-            ['class' => 'yii\grid\ActionColumn'],
+                    'info' => function ($url, $model) {
+
+                        return Html::a('<span class="glyphicon glyphicon-info-sign"></span>', $url, [
+
+                            'title' => Yii::t('app', 'Info'),
+
+                        ]);
+
+                    }
+
+                ],
+            ],
         ],
     ]); ?>
 
